@@ -1,0 +1,30 @@
+<Window  xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Success.MainWindow"
+        WindowState="Maximized"
+        Width="300"
+        Height="150"
+        Title="Hello">
+    <StackPanel Margin="20">
+        
+        <Button Content="Создать пользователя"
+                Click="CreateUser_Click"
+                Margin="0 0 0 10"/>
+
+         <ListBox Name="UsersListBox">
+            <ListBox.ItemTemplate>
+                <DataTemplate x:CompileBindings="False">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <TextBlock Text="{Binding Id}" />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+         <StackPanel Orientation="Horizontal" Spacing="20" HorizontalAlignment="Center" Margin="0 20 0 0">
+            <Button Content="Назад" Name="PrevBtn" Click="Prev_Click"/>
+            <Button Content="Вперёд" Name="NextBtn" Click="Next_Click"/>
+        </StackPanel>
+
+    </StackPanel>
+</Window>
