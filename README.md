@@ -21,3 +21,7 @@ dotnet build
 dotnet run
 
 dotnet add package Npgsql
+
+Dapper
+
+Avalonia.Controls.DataGrid
